@@ -2,6 +2,32 @@
 
   <h2 class="title">Create New Course</h2>
 
+  <mat-horizontal-stepper class="mat-elevator-z5" labelPosition="botton" [linear]="true">
+
+    <mat-step errormessage="Course details in error">
+        <ng-template matStepLabel>Course details</ng-template>
+
+        <create-course-step-1></create-course-step-1>
+
+        <div class="stepper-butons">
+          <button mat-raised-button color="primary" matStepperNext>Add course lessons</button>
+        </div>
+
+    </mat-step>
+
+    <mat-step errormessage="Course lessons in error">
+      <ng-template matStepLabel>Course lessons</ng-template>
+
+      <create-course-step-2></create-course-step-2>
+
+      <div class="stepper-butons">
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent">Create Course</button>
+      </div>
+
+    </mat-step>
+  </mat-horizontal-stepper>
+
 
 </div>
 

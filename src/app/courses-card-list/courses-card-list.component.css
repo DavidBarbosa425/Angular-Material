@@ -1,13 +1,12 @@
 
-
 .course-card {
   margin: 20px 10px;
   max-width:474px;
 }
 
 .course-actions {
-    display: flex;
-  justify-content: center;
+ 
+    text-align: center;
 }
 
 .course-actions button {
