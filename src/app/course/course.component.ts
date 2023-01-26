@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import { MatPaginator } from "@angular/material/paginator";
@@ -14,6 +15,7 @@ import {merge, fromEvent} from "rxjs";
     templateUrl: './course.component.html',
     styleUrls: ['./course.component.scss']
 })
+
 export class CourseComponent implements OnInit, AfterViewInit {
 
     course:Course;
@@ -102,6 +104,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
                 private coursesService: CoursesService) {
 
     }
+
+    displayedColumns = ['seqNo', "description", "duration"]
 
     ngOnInit() {
 
